@@ -12,17 +12,7 @@ variable "instance_tag" {
     "jdiaz",
     "rguzman",
     "gjana",
-    "jolmos",
-    "cmd"
-  ]
-}
-
-variable "services" {
-  type = list(string)
-  default = [
-    "compute.googleapis.com",
-    "artifactregistry.googleapis.com",
-    "dns.googleapis.com"
+    "jolmos"
   ]
 }
 
@@ -43,5 +33,5 @@ variable "zone" {
 
 variable "vm-type" {
   type    = string
-  default = "n1-standard-1"
+  default = "e2-small"
 }
