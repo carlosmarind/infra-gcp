@@ -8,6 +8,6 @@ resource "google_compute_firewall" "lab-servers" {
   }
   // Allow traffic from everywhere to instances with an http-server tag
   source_ranges = ["0.0.0.0/0"]
-  target_tags   = ["lab-servers"]
+  target_tags   = [var.lab_tag]
  
 }

@@ -4,6 +4,10 @@ variable "ssh_password" {
   sensitive   = true
 }
 
+variable "lab_tag" {
+  type    = string
+  default = "lab-servers"
+}
 variable "instance_tag" {
   type = list(any)
   default = [
@@ -12,7 +16,13 @@ variable "instance_tag" {
     "jdiaz",
     "rguzman",
     "gjana",
-    "jolmos"
+    "jolmos",
+    "mtorrejon",
+    "asanmartin",
+    "aespinoza",
+    "dnunez",
+    "icaroca",
+    "pretamales"
   ]
 }
 
@@ -21,16 +31,24 @@ variable "project" {
   default = "expertis-classroom"
 }
 
-variable "region" {
+variable "region_a" {
   type    = string
   default = "us-central1"
 }
 
-variable "zone" {
+variable "region_b" {
+  type    = string
+  default = "us-east1"
+}
+
+variable "zone_a" {
   type    = string
   default = "us-central1-a"
 }
-
+variable "zone_b" {
+  type    = string
+  default = "us-east1-b"
+}
 variable "vm-type" {
   type    = string
   default = "e2-small"
