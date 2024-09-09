@@ -12,7 +12,7 @@ echo \
 ## apt install 
 sudo apt update 
 sudo apt upgrade -y
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin iputils-ping iputils-ping telnet apt-transport-https ca-certificates gnupg curl google-cloud-cli kubectl google-cloud-sdk-gke-gcloud-auth-plugin ca-certificates curl bash-completion
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin iputils-ping iputils-ping telnet apt-transport-https ca-certificates gnupg curl google-cloud-cli kubectl google-cloud-sdk-gke-gcloud-auth-plugin ca-certificates curl bash-completion vim
 #configuracion host
 sudo useradd -m -s /bin/bash ${username}
 sudo usermod -aG sudo,docker ${username}

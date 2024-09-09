@@ -62,10 +62,10 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
   name       = var.gke_options.node_pool_name
   location   = var.zone
   cluster    = google_container_cluster.primary.name
-  node_count = 2
+  node_count = 3
 
   node_config {
-    preemptible  = true
+    preemptible  = false
     machine_type = "e2-medium"
 
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
