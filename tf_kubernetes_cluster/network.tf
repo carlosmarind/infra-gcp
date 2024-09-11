@@ -1,8 +1,3 @@
-#resource "google_compute_network" "vpc_network" {
-#  name                    = var.network_options.vpc_name
-#  auto_create_subnetworks = false
-#  depends_on              = [null_resource.prep]
-#}
 resource "google_compute_subnetwork" "subnetwork" {
   name          = var.network_options.subnet_name
   ip_cidr_range = var.network_options.gke_node_cidr
@@ -20,26 +15,19 @@ resource "google_compute_subnetwork" "subnetwork" {
     data.google_compute_network.default,
   ]
 }
-
-data "google_compute_network" "default" {
-  name = "default"
-}
-data "google_compute_subnetwork" "default" {
-  name = "default"
+resource "google_compute_address" "lb-ip-ingress" {
+  name         = "lb-ip-ingress"
+  address_type = "EXTERNAL"
+  region       = var.region
 }
 
-data "google_compute_subnetwork" "east_default" {
-  name = "default"
-  region = var.second_region
+resource "google_dns_record_set" "kubernetes_devops_cl" {
+  name         = "*.${data.google_dns_managed_zone.devops_cl.dns_name}"
+  managed_zone = data.google_dns_managed_zone.devops_cl.name
+  type         = "A"
+  ttl          = 300
+  rrdatas = [
+    google_compute_address.lb-ip-ingress.address
+  ]
 }
-#resource "google_compute_network_peering" "peering_bastion" {
-#  name         = "peering-default-${var.network_options.vpc_name}"
-#  network      = data.google_compute_network.default.self_link
-#  peer_network = google_compute_network.vpc_network.self_link
-#}
-#
-#resource "google_compute_network_peering" "peering_default" {
-#  name         = "peering-default-${var.network_options.vpc_name}"
-#  network      = google_compute_network.vpc_network.self_link
-#  peer_network = data.google_compute_network.default.self_link
-#}
+

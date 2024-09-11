@@ -4,7 +4,7 @@ resource "google_compute_address" "global_ip" {
   region       = var.region
 }
 resource "null_resource" "wait_for_ip" {
-  depends_on = [google_compute_address.global_ip]
+  depends_on = [google_compute_address.global_ip, google_compute_address.lb-ip-ingress]
   provisioner "local-exec" {
     command = "sleep 30"
   }

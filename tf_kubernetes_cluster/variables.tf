@@ -5,7 +5,7 @@ variable "project_id" {
 variable "second_region" {
   description = "Google Cloud region"
   type        = string
-  
+
 }
 variable "region" {
   description = "Google Cloud region"
@@ -38,16 +38,6 @@ variable "network_options" {
     nat_router_name = string
     global_ip_name  = string
 
-  })
-}
-variable "bastion_options" {
-  description = "Bastion Options"
-  type = object({
-    bastion_name           = string
-    bastion_machine_type   = string
-    bastion_image          = string
-    bastion_startup_script = string
-    bastion_tags           = list(string)
   })
 }
 variable "firewall_options" {

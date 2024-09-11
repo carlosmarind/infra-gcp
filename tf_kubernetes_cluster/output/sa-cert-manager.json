@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "expertis-classroom",
+  "private_key_id": "e2187780a3385e04b36d273c200aea77a6cc584f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDaeKfY/gIezC2Q\nim/tyA3PxZxqy6C6rsXbh2wnEUiMuu31+fOHkxpKnQE1w3uJIeKuHfVw5+izCiJd\nXyVi2vkkkRfprzypL9pHwVpEB4VX+bAhBk+mWNK6tP6cLzpMUr0xQv8h1L5Mfi6R\nMgJNT8R+UgFfTG01Ez1spLMItzTD5VO2u+RTJ1tHlxXXy/sqfovDAZbAshKEbJBM\nlOxpKi70uKDRZPLdqIILLczObTT4O6TzXZW3e55jnZdjOFKencIJYCdzuOwIU2Uw\njV674wIaFYMj2yIhPGLyVq2jLRRmSz0pCbpp5MaBMNHl5qEbKljRmG48z8TavdqB\nsmdfDdrtAgMBAAECggEADz0H8K3PisOsq/DvdvxcvR6Dspb9BdPeirTvXeny6wVu\nkGJO5N+cVluNT0TH+Hd+Gj+y2MHg2g79r+wDrX4oIZ0sXHbhjIM4B9Flh+qCF9+/\n/QyRJPhE8N0ZdZT9ce2MV7rKFRI6qvJ/n7u+K8p4omPWWfOvh8hEajAycrCJ1nBL\nZ644PTy58YdBcsBiUUc1qYioUQvDhr+qy7+ec07jIvRK+BFRjEHRFYXejTaxLwOK\nCu9DMCf32ooW+4SWXZUdsonoOJW/+rBHaVRJMaegHY89m4zZ+0h8ucmb5Nk3eMv3\nQygAv5VwWpwOJgZ25NAfNjccn8EoRQhI8Ea0jgS7awKBgQD2OXdouKVLAgmWbJHO\nYWMXz0R8/Bc91xblzVuXeBBzumQQ0nk0IJhAxe3UHswWbPDi27U+B+XWDjcIyKg0\nvPQbiJsWRWgPlKC/oztuMvMSjis2KApzKTiZRjaSsY9V4vLL6qUPKrGirUgH1YhQ\nEWbgIMTWHGV37lWGuTOVOT12+wKBgQDjJR3MKWeZpuDNjdqwy3AVkOh7qkl9rBya\n1kLD3fkDTuAPspTJWc1rtJoKGzFZCxbrqvahni77Lv1vVQ9OIl3kJCfVTG5PmMbx\nKVkstH5Pr0fsepVZ1VGkl1uR40TyMuCPue+pKXPHSel1ebgSw4Dd78RyT/Usc4nv\nOh/p9dXxNwKBgGjqQaQgkWXtn1I2PsaWnpelnIQ5EloqTTpsD2vyH+h/8mVsmXKJ\ntPZcoCMzYDjqAJZZkde1m8xi0DZw8aNPJCCbS6HovxdseDZQAmHJWeN9KpJv60v4\ns4Iz9cr51558DoKvH9fflENB3KBh7yxWzeQQcm7dOKsqpcy7G2ypMDSDAoGASfrP\nvqwJmwi4FRrLjGNmCRAeOBDZSL4ivudj7WlBbitlXJd8UCwYdKjotrvukaLD/1O6\nah8cDCFc18LrbjZRQDnqY1U2ZGRM/0TJT38l2IwtL78pH44Tvjix0U0lKoEZlJYp\nkX33wIO5LtLK+gmE0kQCRnz2TFkBJtJWjJvN53cCgYAAummS7y6nl+kWlnRWm2tj\n5GB23I/jyHrWnJKGqFo2YuDXJuVYJHG04FYoAgkSdldJtIn736cjRiA12UlD8ekg\n+KIfKa7G5YOzYNh+s9ZmCNQBp4gowOO+VWjJtOp1H33sBktbc63Aj1R+yx+zHwyW\nSM8zu9smdUsSA/Mt4Pb67w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sa-cert-manager@expertis-classroom.iam.gserviceaccount.com",
+  "client_id": "105142386751037891981",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sa-cert-manager%40expertis-classroom.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

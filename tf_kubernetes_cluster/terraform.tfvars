@@ -1,7 +1,7 @@
-project_id = "expertis-classroom"
-region     = "us-central1"
+project_id    = "expertis-classroom"
+region        = "us-central1"
 second_region = "us-east1"
-zone   = "us-central1-a"
+zone          = "us-central1-a"
 gke_options = {
   cluster_name            = "my-gke-cluster-lab"
   node_pool_name          = "lab-node-pool"
@@ -22,17 +22,6 @@ network_options = {
 
 }
 
-bastion_options = {
-  bastion_name           = "lab-bastion"
-  bastion_machine_type   = "e2-small"
-  bastion_image          = "ubuntu-2004-lts"
-  bastion_startup_script = <<-EOT
-  #!/bin/bash
-  sudo apt-get update
-  sudo apt-get install -yq git
-EOT
-  bastion_tags           = ["bastion"]
-}
 firewall_options = {
   firewall_name          = "allow-ssh-bastion"
   firewall_ports         = ["22"]
