@@ -1,9 +1,3 @@
-provider "google" {
-  project = var.project
-  region  = var.region
-}
-
-
 ## Artifact Registry
 resource "google_artifact_registry_repository" "docker-repository" {
   location      = var.region
@@ -23,15 +17,6 @@ resource "google_service_account" "sa-registry" {
   create_ignore_already_exists = true
 }
 
-data "google_iam_policy" "admin" {
-  binding {
-    role = "roles/artifactregistry.repoAdmin"
-    members = [
-      google_service_account.sa-registry.member
-    ]
-  }
-}
-
 resource "google_artifact_registry_repository_iam_policy" "policy" {
   project     = google_artifact_registry_repository.docker-repository.project
   location    = google_artifact_registry_repository.docker-repository.location
@@ -44,8 +29,5 @@ resource "google_service_account_key" "key" {
 }
 resource "local_file" "service_account" {
   content  = base64decode(google_service_account_key.key.private_key)
-  filename = "${path.module}/serviceaccount.json"
-}
-output "private_key_instructions" {
-  value = "The service_account key has been saved to serviceaccount.json. Handle it securely."
+  filename = "${path.module}/output/serviceaccount.json"
 }
