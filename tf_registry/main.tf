@@ -29,5 +29,5 @@ resource "google_service_account_key" "key" {
 }
 resource "local_file" "service_account" {
   content  = base64decode(google_service_account_key.key.private_key)
-  filename = "${path.module}/output/serviceaccount.json"
+  filename = "${path.module}/output/sa-registry.json"
 }

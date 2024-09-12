@@ -18,5 +18,8 @@ resource "google_compute_instance" "default" {
     password  = "jenmdev01.2024",
     region    = var.region_a
   })
+  metadata = {
+    ssh-keys = "carlosmarind:${file("~/.ssh/id_rsa.pub")}"
+  }
   tags = ["jenkins"]
 }
