@@ -37,6 +37,9 @@ resource "google_container_cluster" "primary" {
     cidr_blocks {
       cidr_block = data.google_compute_subnetwork.east_default.ip_cidr_range
     }
+    cidr_blocks {
+      cidr_block = data.google_compute_subnetwork.west1_default.ip_cidr_range
+    }
   }
   default_max_pods_per_node = 50
 
