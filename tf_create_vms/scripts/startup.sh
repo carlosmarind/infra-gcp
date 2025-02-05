@@ -20,6 +20,3 @@ echo "${username}:${password}" | sudo chpasswd;
 sudo echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 sudo rm /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
 sudo systemctl restart sshd
-#echo "${sa-config}" | sudo -i -u ${username} docker login -u _json_key_base64 --password-stdin https://${region}-docker.pkg.dev
-su -c "mkdir /home/${username}/registry" ${username}
-echo "${sa-config}" | su -c "tee /home/${username}/registry/config.json" ${username}

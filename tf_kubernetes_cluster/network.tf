@@ -21,13 +21,4 @@ resource "google_compute_address" "lb-ip-ingress" {
   region       = var.region
 }
 
-resource "google_dns_record_set" "kubernetes_devops_cl" {
-  name         = "*.${data.google_dns_managed_zone.devops_cl.dns_name}"
-  managed_zone = data.google_dns_managed_zone.devops_cl.name
-  type         = "A"
-  ttl          = 300
-  rrdatas = [
-    google_compute_address.lb-ip-ingress.address
-  ]
-}
 

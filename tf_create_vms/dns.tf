@@ -3,7 +3,7 @@ resource "google_dns_managed_zone" "devops_cl" {
   name          = "devops-cl"
   dns_name      = "devops.cl."
   description   = "devops.cl Public DNS zone"
-  force_destroy = "true"
+  force_destroy = "false"
 }
 ## to register web-server's ip address in DNS
 resource "google_dns_record_set" "devops_cl" {

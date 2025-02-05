@@ -8,4 +8,4 @@ services = [
   "servicenetworking.googleapis.com",
   "gkehub.googleapis.com"
 ]
-project = "expertis-classroom"
+project = "lab-contenedores"

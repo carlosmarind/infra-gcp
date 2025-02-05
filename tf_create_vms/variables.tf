@@ -29,7 +29,10 @@ variable "zone_a" {
 }
 variable "zone_b" {
   type = string
+}
 
+variable "zone_c" {
+  type = string
 }
 variable "vm-type" {
   type = string

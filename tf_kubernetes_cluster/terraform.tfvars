@@ -1,12 +1,12 @@
-project_id    = "expertis-classroom"
+project_id    = "lab-contenedores"
 region        = "us-central1"
-second_region = "us-east1"
+#second_region = "us-east1"
 zone          = "us-central1-a"
 gke_options = {
   cluster_name            = "my-gke-cluster-lab"
   node_pool_name          = "lab-node-pool"
   enable_private_nodes    = true
-  enable_private_endpoint = true
+  enable_private_endpoint = false
   master_ipv4_cidr_block  = "10.13.0.0/28"
 }
 

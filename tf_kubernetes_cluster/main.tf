@@ -35,11 +35,14 @@ resource "google_container_cluster" "primary" {
       cidr_block = data.google_compute_subnetwork.default.ip_cidr_range
     }
     cidr_blocks {
+      cidr_block = "0.0.0.0/0" # Permite el acceso desde cualquier dirección IP (no recomendado para producción)
+    }
+    /* cidr_blocks {
       cidr_block = data.google_compute_subnetwork.east_default.ip_cidr_range
     }
     cidr_blocks {
       cidr_block = data.google_compute_subnetwork.west1_default.ip_cidr_range
-    }
+    }*/
   }
   default_max_pods_per_node = 50
 
@@ -60,7 +63,7 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
   name       = var.gke_options.node_pool_name
   location   = var.zone
   cluster    = google_container_cluster.primary.name
-  node_count = 3
+  node_count = 4
 
   node_config {
     preemptible  = false
@@ -75,8 +78,9 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
 }
 
 resource "google_service_account" "sa-k8-lab" {
-  account_id   = "sa-k8-lab"
-  display_name = "Service Account Kubernetes lab"
+  account_id                   = "sa-k8-lab"
+  display_name                 = "Service Account Kubernetes lab"
+  create_ignore_already_exists = true
 }
 
 resource "google_service_account" "sa-cert-manager" {

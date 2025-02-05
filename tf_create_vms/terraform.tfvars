@@ -1,22 +1,23 @@
-ssh_password = "lab.2024"
+ssh_password = "lab.2025"
 lab_tag      = "lab-servers"
 instance_tag = [
-  "paldana",
-  "mcorona",
-  "jdiaz",
-  "rguzman",
-  "gjana",
-  "jolmos",
-  "mtorrejon",
-  "asanmartin",
-  "aespinoza",
-  "dnunez",
-  "icaroca",
-  "pretamales"
+  "gtoledo",
+  "barias",
+  "csadoval",
+  "flopez",
+  "ddiaz",
+  "jbasualdo",
+  "jvargas",
+  "cvalle",
+  "canabalon",
+  "jvaldes",
+  "grojas",
+  "egolle",
+  "eochoa",
+  "dpezoa",
+  "rarancibia",
 ]
-project  = "expertis-classroom"
+project  = "lab-contenedores"
 region_a = "us-central1"
-region_b = "us-east1"
 zone_a   = "us-central1-a"
-zone_b   = "us-east1-b"
 vm-type  = "e2-small"
