@@ -37,12 +37,6 @@ resource "google_container_cluster" "primary" {
     cidr_blocks {
       cidr_block = "0.0.0.0/0" # Permite el acceso desde cualquier dirección IP (no recomendado para producción)
     }
-    /* cidr_blocks {
-      cidr_block = data.google_compute_subnetwork.east_default.ip_cidr_range
-    }
-    cidr_blocks {
-      cidr_block = data.google_compute_subnetwork.west1_default.ip_cidr_range
-    }*/
   }
   default_max_pods_per_node = 50
 
@@ -67,7 +61,7 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
 
   node_config {
     preemptible  = false
-    machine_type = "e2-medium"
+    machine_type = var.gke_options.node_pool_vm_type
 
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     service_account = google_service_account.sa-k8-lab.email

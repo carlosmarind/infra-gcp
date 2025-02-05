@@ -2,11 +2,6 @@ variable "project_id" {
   description = "Google Cloud Platform project ID"
   type        = string
 }
-variable "second_region" {
-  description = "Google Cloud region"
-  type        = string
-
-}
 variable "region" {
   description = "Google Cloud region"
   type        = string
@@ -21,6 +16,7 @@ variable "gke_options" {
   type = object({
     cluster_name            = string
     node_pool_name          = string
+    node_pool_vm_type       = string
     enable_private_nodes    = bool
     enable_private_endpoint = bool
     master_ipv4_cidr_block  = string

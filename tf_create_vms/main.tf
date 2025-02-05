@@ -2,7 +2,7 @@ resource "google_compute_instance" "default" {
   name         = "vm-${count.index}"
   machine_type = var.vm-type
   count        = length(var.instance_tag)
-  zone         = var.zone_a
+  zone         = var.zone
   boot_disk {
     initialize_params {
       image = "ubuntu-minimal-2204-jammy-v20240829"

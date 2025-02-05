@@ -17,7 +17,7 @@ instance_tag = [
   "dpezoa",
   "rarancibia",
 ]
-project  = "lab-contenedores"
-region_a = "us-central1"
-zone_a   = "us-central1-a"
-vm-type  = "e2-small"
+project = "lab-contenedores"
+region  = "us-central1"
+zone    = "us-central1-a"
+vm-type = "e2-small"

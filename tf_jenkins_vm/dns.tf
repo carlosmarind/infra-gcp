@@ -16,12 +16,12 @@ resource "google_compute_firewall" "jenkins-server" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80","443"]
+    ports    = ["80", "443"]
   }
   // Allow traffic from everywhere to instances with an http-server tag
   source_ranges = ["0.0.0.0/0"]
   target_tags   = ["jenkins"]
- 
+
 }
 
 resource "google_dns_record_set" "kubernetes_devops_cl" {
