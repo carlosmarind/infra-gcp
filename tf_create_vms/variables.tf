@@ -12,10 +12,28 @@ variable "instance_tag" {
 variable "project" {
   type = string
 }
-variable "region" {
+variable "region_a" {
   type = string
 }
-variable "zone" {
+variable "zone_a" {
+  type = string
+}
+variable "region_b" {
+  type = string
+}
+variable "zone_b" {
+  type = string
+}
+variable "region_c" {
+  type = string
+}
+variable "zone_c" {
+  type = string
+}
+variable "region_d" {
+  type = string
+}
+variable "zone_d" {
   type = string
 }
 variable "vm-type" {
