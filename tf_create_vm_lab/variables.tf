@@ -11,6 +11,9 @@ variable "zone" {
 variable "vm-type" {
   type = string
 }
+variable "disk_size" {
+  type = number
+}
 variable "instance_name" {
   type = string
 }

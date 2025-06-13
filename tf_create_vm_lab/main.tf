@@ -5,7 +5,7 @@ resource "google_compute_instance" "default" {
   boot_disk {
     initialize_params {
       image = "ubuntu-minimal-2204-jammy-v20240829"
-      size  = 300
+      size  = var.disk_size
     }
   }
 
