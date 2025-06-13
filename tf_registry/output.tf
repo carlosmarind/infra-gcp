@@ -1,3 +1,3 @@
 output "private_key_instructions" {
-  value = "The service_account key has been saved to serviceaccount.json. Handle it securely."
+  value = "La configuracion del la cuenta de servicio para escribir en el registry de gcp esta en la ruta ${path.module}/output/sa-registry-decoded.json"
 }
