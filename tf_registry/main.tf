@@ -27,7 +27,7 @@ resource "google_service_account_key" "key" {
   service_account_id = google_service_account.sa-registry.name
   public_key_type    = "TYPE_X509_PEM_FILE"
 }
-resource "local_file" "service_account" {
+resource "local_file" "service_account_decoded" {
   content  = base64decode(google_service_account_key.key.private_key)
-  filename = "${path.module}/output/sa-registry.json"
+  filename = "${path.module}/output/sa-registry-decoded.json"
 }
